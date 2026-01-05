@@ -1,0 +1,114 @@
+/**
+ * Design System Tokens
+ * These CSS variables are the single source of truth for all design values.
+ * Do NOT use raw hex, rgb, hsl, or hardcoded spacing values in components.
+ * All values must reference these tokens.
+ */
+
+:root {
+  /* ===========================================
+   * COLOR TOKENS - BASE PALETTE
+   * Source: Figma Lo9r632ePw6mQTi42uqNCk
+   * ⚠️ Do not use directly - use semantic tokens
+   * =========================================== */
+  --color-gray-white: #ffffff;
+  --color-blue-100: #e7f1ff;
+
+  /* ===========================================
+   * COLOR TOKENS - SEMANTIC (Text)
+   * Source: Figma Lo9r632ePw6mQTi42uqNCk
+   * =========================================== */
+  --color-text-primary: #1d3261;
+  --color-text-secondary: #4d5c6e;
+
+  /* ===========================================
+   * COLOR TOKENS - SEMANTIC (Surface)
+   * Source: Figma Lo9r632ePw6mQTi42uqNCk
+   * =========================================== */
+  --color-surface-white: #ffffff;
+  --color-surface-black: #000000;
+  --color-surface-light: #f7f9fb;
+
+  /* ===========================================
+   * COLOR TOKENS - SEMANTIC (Stroke)
+   * Source: Figma Lo9r632ePw6mQTi42uqNCk
+   * =========================================== */
+  --color-stroke-light: #dee5ef;
+
+  /* ===========================================
+   * TYPOGRAPHY TOKENS
+   * Source: Figma node 22399:214
+   * =========================================== */
+  
+  /* Font Sizes */
+  --size-font-size-lg: 20px;
+  --size-font-size-md: 16px;
+  --size-font-size-sm: 14px;
+  --size-font-size-xs: 13px;
+  --size-font-size-2xs: 12px;
+  --size-font-size-3xs: 11px;
+  --size-font-size-4xs: 10px;
+  --size-font-size-5xs: 9px;
+
+  /* Line Heights */
+  --line-height-font-line-height-lg: 20px;
+  --line-height-font-line-height-md: 20px;
+  --line-height-font-line-height-sm: 18px;
+  --line-height-font-line-height-xs: 16px;
+  --line-height-font-line-height-2xs: 14px;
+  --line-height-font-line-height-3xs: 12px;
+
+  /* Letter Spacing */
+  --spacing-font-letter-spacing-normal: 0px;
+  --spacing-font-letter-spacing-dense: -0.2px;
+
+  /* Font Weights */
+  --weight-font-weight-bold: 700;
+  --weight-font-weight-semibold: 600;
+  --weight-font-weight-medium: 500;
+
+  /* ===========================================
+   * SPACING TOKENS
+   * Source: Figma Lo9r632ePw6mQTi42uqNCk
+   * Numeric scale based on pixel values
+   * =========================================== */
+  --spacing-0: 0px;
+  --spacing-12: 12px;
+  --spacing-24: 24px;
+  --spacing-64: 64px;
+
+  /* ===========================================
+   * RADIUS TOKENS
+   * Source: Figma Lo9r632ePw6mQTi42uqNCk
+   * =========================================== */
+  --radius-md: 12px;
+  --radius-lg: 24px;
+
+  /* ===========================================
+   * SHADOW TOKENS
+   * Source: Figma Lo9r632ePw6mQTi42uqNCk
+   * Format: offset-x offset-y blur-radius spread-radius color
+   * =========================================== */
+  
+  /* Menu/Dropdown - large subtle shadow for floating elements */
+  --shadow-menu-dropdown: 0 14px 18px 0 #4d5c6e26;
+  
+  /* Button shadows */
+  --shadow-button-primary-hover: 0 3px 8px 0 #2d75e27a;
+  --shadow-button-secondary-default: 0 1px 3px 0 #0000001a;
+  --shadow-button-secondary-hover: 0 1px 3px 0 #0000001a;
+  --shadow-button-critical-hover: 0 3px 8px 0 #db3a3a7a;
+
+  /* ===========================================
+   * ADDITIONAL COLOR TOKENS (Button/System)
+   * Source: Figma Lo9r632ePw6mQTi42uqNCk
+   * =========================================== */
+  --color-button-primary: #2d75e2;
+  --color-system-critical: #db3a3a;
+
+  /* ===========================================
+   * ADDITIONAL RADIUS TOKENS
+   * Source: Figma Lo9r632ePw6mQTi42uqNCk
+   * =========================================== */
+  --radius-sm: 4px;
+}
