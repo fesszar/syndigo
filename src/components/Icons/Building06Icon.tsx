@@ -1,0 +1,21 @@
+import type { CSSProperties } from 'react';
+
+export interface Building06IconProps {
+  size?: number;
+  color?: string;
+  className?: string;
+  style?: CSSProperties;
+}
+
+export function Building06Icon({
+  size = 24,
+  color = '#718094',
+  className,
+  style,
+}: Building06IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className} style={style}>
+      <path d="M2 21H22M3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V21M7 7H10M7 11H10M7 15H10M14 7H17M14 11H17M14 15H17" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
