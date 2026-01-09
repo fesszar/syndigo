@@ -54,8 +54,8 @@ const stateStyles: Record<TextFieldState, CSSProperties> = {
     cursor: 'not-allowed',
   },
   error: {
-    backgroundColor: 'var(--color-surface-white)',
-    border: '1.5px solid var(--color-system-critical)',
+    backgroundColor: 'var(--color-surface-medium, #dee5ef)',
+    border: '1px solid var(--color-stroke-light, #dee5ef)',
     color: 'var(--color-text-primary)',
   },
 };
