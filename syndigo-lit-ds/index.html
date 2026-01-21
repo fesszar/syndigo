@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Syndigo Lit Design System - Demo</title>
+  <link rel="stylesheet" href="./src/tokens/tokens.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 24px;
+      background-color: #f7f9fb;
+      color: #1d3261;
+    }
+    h1 {
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      color: #4d5c6e;
+      margin-bottom: 32px;
+    }
+    .section {
+      background: white;
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 24px;
+      border: 1px solid #dee5ef;
+    }
+    .section h2 {
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 16px;
+      color: #1d3261;
+    }
+    .component-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .component-row:last-child {
+      margin-bottom: 0;
+    }
+    .label {
+      font-size: 12px;
+      color: #4d5c6e;
+      min-width: 100px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Syndigo Lit Design System</h1>
+  <p class="subtitle">Component library built with Lit Elements</p>
+
+  <!-- Buttons -->
+  <div class="section">
+    <h2>Buttons</h2>
+    <div class="component-row">
+      <span class="label">Variants:</span>
+      <syn-button variant="primary">Primary</syn-button>
+      <syn-button variant="secondary">Secondary</syn-button>
+      <syn-button variant="critical">Critical</syn-button>
+      <syn-button variant="text">Text</syn-button>
+    </div>
+    <div class="component-row">
+      <span class="label">States:</span>
+      <syn-button variant="primary" disabled>Disabled</syn-button>
+      <syn-button variant="primary" loading>Loading</syn-button>
+    </div>
+  </div>
+
+  <!-- Text -->
+  <div class="section">
+    <h2>Typography</h2>
+    <div class="component-row">
+      <syn-text variant="heading20Semibold" as="h3">Heading 20 Semibold</syn-text>
+    </div>
+    <div class="component-row">
+      <syn-text variant="heading16Semibold">Heading 16 Semibold</syn-text>
+    </div>
+    <div class="component-row">
+      <syn-text variant="body14Medium">Body 14 Medium</syn-text>
+    </div>
+    <div class="component-row">
+      <syn-text variant="body12Regular" color="var(--color-text-secondary)">Body 12 Regular (Secondary)</syn-text>
+    </div>
+  </div>
+
+  <!-- Icons -->
+  <div class="section">
+    <h2>Icons</h2>
+    <div class="component-row">
+      <syn-icon name="arrow-down"></syn-icon>
+      <syn-icon name="arrow-up"></syn-icon>
+      <syn-icon name="arrow-left"></syn-icon>
+      <syn-icon name="arrow-right"></syn-icon>
+      <syn-icon name="check"></syn-icon>
+      <syn-icon name="x"></syn-icon>
+      <syn-icon name="search"></syn-icon>
+      <syn-icon name="settings"></syn-icon>
+      <syn-icon name="user"></syn-icon>
+      <syn-icon name="star"></syn-icon>
+      <syn-icon name="heart"></syn-icon>
+      <syn-icon name="home"></syn-icon>
+    </div>
+    <div class="component-row">
+      <span class="label">Sizes:</span>
+      <syn-icon name="star" size="16"></syn-icon>
+      <syn-icon name="star" size="20"></syn-icon>
+      <syn-icon name="star" size="24"></syn-icon>
+      <syn-icon name="star" size="32"></syn-icon>
+    </div>
+    <div class="component-row">
+      <span class="label">Colors:</span>
+      <syn-icon name="heart" color="var(--color-system-critical)"></syn-icon>
+      <syn-icon name="check-circle" color="var(--color-system-success)"></syn-icon>
+      <syn-icon name="alert-circle" color="var(--color-system-warning)"></syn-icon>
+      <syn-icon name="info" color="var(--color-button-primary)"></syn-icon>
+    </div>
+  </div>
+
+  <!-- Form Elements -->
+  <div class="section">
+    <h2>Form Elements</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 600px;">
+      <syn-text-field label="Text Field" placeholder="Enter text..."></syn-text-field>
+      <syn-text-field label="With Error" placeholder="Enter text..." errorText="This field is required"></syn-text-field>
+      <syn-text-field label="Disabled" placeholder="Disabled field" disabled></syn-text-field>
+      <syn-text-field label="With Help Text" placeholder="Enter email" helpText="We'll never share your email"></syn-text-field>
+    </div>
+    <div style="max-width: 600px; margin-top: 16px;">
+      <syn-text-area label="Text Area" placeholder="Enter description..." rows="3"></syn-text-area>
+    </div>
+    <div class="component-row" style="margin-top: 16px;">
+      <span class="label">Toggle:</span>
+      <syn-toggle></syn-toggle>
+      <syn-toggle checked></syn-toggle>
+      <syn-toggle disabled></syn-toggle>
+      <syn-toggle label="With label"></syn-toggle>
+    </div>
+  </div>
+
+  <!-- Pills & Tags -->
+  <div class="section">
+    <h2>Pills & Tags</h2>
+    <div class="component-row">
+      <span class="label">Pills:</span>
+      <syn-pill>Default</syn-pill>
+      <syn-pill selected>Selected</syn-pill>
+      <syn-pill removable>Removable</syn-pill>
+      <syn-pill disabled>Disabled</syn-pill>
+    </div>
+    <div class="component-row">
+      <span class="label">Tags:</span>
+      <syn-tag>Category</syn-tag>
+      <syn-tag selected>Selected</syn-tag>
+      <syn-tag removable>Removable</syn-tag>
+    </div>
+  </div>
+
+  <!-- Status Indicators -->
+  <div class="section">
+    <h2>Status Indicators</h2>
+    <div class="component-row">
+      <syn-status-indicator status="default" label="Default"></syn-status-indicator>
+      <syn-status-indicator status="success" label="Published"></syn-status-indicator>
+      <syn-status-indicator status="warning" label="Pending"></syn-status-indicator>
+      <syn-status-indicator status="critical" label="Error"></syn-status-indicator>
+    </div>
+  </div>
+
+  <!-- Data Wells -->
+  <div class="section">
+    <h2>Data Wells</h2>
+    <div class="component-row" style="gap: 32px;">
+      <syn-data-well label="SKU" value="12345678"></syn-data-well>
+      <syn-data-well label="Status" value="Active"></syn-data-well>
+      <syn-data-well label="Last Updated" value="Jan 21, 2026"></syn-data-well>
+      <syn-data-well label="Clickable" value="Click me" clickable></syn-data-well>
+    </div>
+  </div>
+
+  <!-- Tooltips -->
+  <div class="section">
+    <h2>Tooltips</h2>
+    <div class="component-row">
+      <syn-tooltip content="Top tooltip" placement="top">
+        <syn-button variant="secondary">Top</syn-button>
+      </syn-tooltip>
+      <syn-tooltip content="Bottom tooltip" placement="bottom">
+        <syn-button variant="secondary">Bottom</syn-button>
+      </syn-tooltip>
+      <syn-tooltip content="Left tooltip" placement="left">
+        <syn-button variant="secondary">Left</syn-button>
+      </syn-tooltip>
+      <syn-tooltip content="Right tooltip" placement="right">
+        <syn-button variant="secondary">Right</syn-button>
+      </syn-tooltip>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="section">
+    <h2>Toasts</h2>
+    <div style="display: flex; flex-direction: column; gap: 12px; max-width: 400px;">
+      <syn-toast variant="info" message="This is an info message" duration="0"></syn-toast>
+      <syn-toast variant="success" message="Operation completed successfully" duration="0"></syn-toast>
+      <syn-toast variant="warning" message="Please review before proceeding" duration="0"></syn-toast>
+      <syn-toast variant="error" message="An error occurred" duration="0"></syn-toast>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="section">
+    <h2>Modal</h2>
+    <syn-button variant="primary" onclick="document.getElementById('demo-modal').open = true">
+      Open Modal
+    </syn-button>
+    <syn-modal 
+      id="demo-modal" 
+      title="Example Modal" 
+      primaryLabel="Save"
+      secondaryLabel="Cancel"
+    >
+      <p>This is the modal content. You can put any content here.</p>
+      <syn-text-field label="Example Field" placeholder="Enter something..."></syn-text-field>
+    </syn-modal>
+  </div>
+
+  <!-- Table -->
+  <div class="section">
+    <h2>Table</h2>
+    <syn-table>
+      <syn-table-header>
+        <syn-table-header-cell sortable width="200px">Product Name</syn-table-header-cell>
+        <syn-table-header-cell width="100px">SKU</syn-table-header-cell>
+        <syn-table-header-cell width="120px">Status</syn-table-header-cell>
+        <syn-table-header-cell>Category</syn-table-header-cell>
+      </syn-table-header>
+      <div style="display: flex; flex-direction: column; gap: 4px; margin-top: 8px;">
+        <syn-table-row>
+          <syn-table-cell width="200px">Men's Oxford Shoes</syn-table-cell>
+          <syn-table-cell width="100px">SKU-001</syn-table-cell>
+          <syn-table-cell width="120px">
+            <syn-status-indicator status="success" label="Active"></syn-status-indicator>
+          </syn-table-cell>
+          <syn-table-cell>Footwear</syn-table-cell>
+        </syn-table-row>
+        <syn-table-row selected>
+          <syn-table-cell width="200px">Women's Running Sneakers</syn-table-cell>
+          <syn-table-cell width="100px">SKU-002</syn-table-cell>
+          <syn-table-cell width="120px">
+            <syn-status-indicator status="warning" label="Pending"></syn-status-indicator>
+          </syn-table-cell>
+          <syn-table-cell>Footwear</syn-table-cell>
+        </syn-table-row>
+        <syn-table-row>
+          <syn-table-cell width="200px">Kids' Winter Boots</syn-table-cell>
+          <syn-table-cell width="100px">SKU-003</syn-table-cell>
+          <syn-table-cell width="120px">
+            <syn-status-indicator status="critical" label="Error"></syn-status-indicator>
+          </syn-table-cell>
+          <syn-table-cell>Footwear</syn-table-cell>
+        </syn-table-row>
+      </div>
+    </syn-table>
+  </div>
+
+  <!-- Inline Error -->
+  <div class="section">
+    <h2>Inline Messages</h2>
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <syn-inline-error message="This field is required" severity="error"></syn-inline-error>
+      <syn-inline-error message="Please review this value" severity="warning"></syn-inline-error>
+      <syn-inline-error message="Additional information available" severity="info"></syn-inline-error>
+    </div>
+  </div>
+
+  <script type="module">
+    // Import all components
+    import './src/components/syn-text.js';
+    import './src/components/syn-icon.js';
+    import './src/components/syn-button.js';
+    import './src/components/syn-text-field.js';
+    import './src/components/syn-text-area.js';
+    import './src/components/syn-toggle.js';
+    import './src/components/syn-pill.js';
+    import './src/components/syn-tag.js';
+    import './src/components/syn-status-indicator.js';
+    import './src/components/syn-data-well.js';
+    import './src/components/syn-tooltip.js';
+    import './src/components/syn-toast.js';
+    import './src/components/syn-modal.js';
+    import './src/components/syn-table.js';
+    import './src/components/syn-inline-error.js';
+    import './src/components/syn-input-field.js';
+
+    // Modal close handler
+    const modal = document.getElementById('demo-modal');
+    modal.addEventListener('syn-close', () => modal.open = false);
+    modal.addEventListener('syn-secondary', () => modal.open = false);
+    modal.addEventListener('syn-primary', () => {
+      alert('Primary action clicked!');
+      modal.open = false;
+    });
+  </script>
+</body>
+</html>

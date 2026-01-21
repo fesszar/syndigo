@@ -1,0 +1,95 @@
+# Syndigo Lit Design System
+
+Welcome to the Syndigo Design System built with Lit Elements. This library provides a collection of reusable web components that follow Syndigo's design language.
+
+## Getting Started
+
+### Installation
+
+```bash
+npm install @syndigo/lit-ds lit
+```
+
+### Usage
+
+Import components individually:
+
+```javascript
+import '@syndigo/lit-ds/components/syn-button.js';
+import '@syndigo/lit-ds/components/syn-text-field.js';
+```
+
+Or import all components:
+
+```javascript
+import '@syndigo/lit-ds';
+```
+
+Import the design tokens CSS:
+
+```javascript
+import '@syndigo/lit-ds/tokens.css';
+```
+
+### Using in HTML
+
+```html
+<syn-button variant="primary">Click Me</syn-button>
+<syn-text-field label="Name" placeholder="Enter your name"></syn-text-field>
+```
+
+## Design Tokens
+
+The design system uses CSS custom properties for theming. All tokens are defined in `tokens.css`:
+
+### Colors
+- `--color-button-primary`: Primary action color (#2d75e2)
+- `--color-text-primary`: Primary text color (#1d3261)
+- `--color-text-secondary`: Secondary text color (#4d5c6e)
+- `--color-surface-medium`: Surface background (#dee5ef)
+- `--color-system-success`: Success state (#0e8662)
+- `--color-system-warning`: Warning state (#f58319)
+- `--color-system-critical`: Error state (#db3a3a)
+
+### Typography
+- `--font-family`: Inter, system-ui, sans-serif
+- Various font sizes and weights defined for consistent typography
+
+### Spacing
+- Standard spacing scale: 4px, 8px, 12px, 16px, 24px, 32px
+
+## Components
+
+### Form Components
+- **Button** - Primary actions and interactions
+- **TextField** - Text input with labels and validation
+- **TextArea** - Multi-line text input
+- **Checkbox** - Boolean selection
+- **Radio** - Single selection from options
+- **Toggle** - On/off switch
+- **SearchField** - Search input with icon
+- **SelectField** - Dropdown selection
+
+### Display Components
+- **Avatar** - User profile images
+- **Badge** - Counts and labels
+- **Icon** - SVG icons
+- **Pill** - Removable tags
+- **Tag** - Categorization labels
+- **StatusIndicator** - Status display
+- **ProgressBar** - Progress indication
+- **Tooltip** - Contextual information
+
+### Feedback Components
+- **Toast** - Notification messages
+- **Modal** - Dialog overlays
+- **EmptyState** - Placeholder content
+
+### Data Components
+- **Table** - Data tables with sorting
+- **DataWell** - Key-value display
+
+### Navigation
+- **Tab** - Tab navigation
+- **MenuItem** - Menu items
+- **Stepper** - Multi-step progress
