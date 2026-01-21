@@ -2,6 +2,14 @@
   "name": "@syndigo/lit-ds",
   "version": "1.0.0",
   "description": "Syndigo Design System - Lit Elements",
+  "author": "Syndigo",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fesszar/syndigo.git",
+    "directory": "syndigo-lit-ds"
+  },
+  "homepage": "https://github.com/fesszar/syndigo#readme",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
