@@ -1,0 +1,201 @@
+{
+  "name": "syndigo-design-system",
+  "displayName": "Syndigo Design System",
+  "alias": ["Syndigo DS", "@syndigo/design-system"],
+  "version": "2.0.0",
+  "description": "55 production-ready React components with Figma parity",
+  "documentation": "/DESIGN-SYSTEM.md",
+  "figmaFile": "https://figma.com/file/Hxa07kuxW2VZuVRjKVS6zM",
+  "componentPath": "src/components",
+  "importPattern": "@syndigo/design-system",
+  "componentCount": 55,
+  "categories": [
+    {
+      "name": "Form & Input",
+      "count": 11,
+      "components": ["Button", "InputField", "TextField", "TextArea", "SelectField", "Radio", "Toggle", "SearchField", "SelectBox", "SelectMenu", "Upload"]
+    },
+    {
+      "name": "Layout & Containers",
+      "count": 10,
+      "components": ["Modal", "Dialog", "Tooltip", "PageHeader", "SideNav", "RightPanel", "ProductPanel", "PDPSidePanel", "ActionBar", "ActionFooter"]
+    },
+    {
+      "name": "Navigation",
+      "count": 10,
+      "components": ["Table", "Tab", "TabGroup", "TabHeader", "MenuItem", "TopNavigation", "Stepper", "FilterDropdown", "FilterPanel", "OpenPages"]
+    },
+    {
+      "name": "Data Display",
+      "count": 13,
+      "components": ["Avatar", "Pill", "Tag", "StatusIndicator", "CountIndicator", "Thumbnail", "DataWell", "ComplexStatus", "ProgressBar", "ProductInfo", "TogglePills", "Profile", "Logo"]
+    },
+    {
+      "name": "Feedback & States",
+      "count": 5,
+      "components": ["Toast", "InlineError", "EmptyState", "BackgroundTasks", "Spinner"]
+    },
+    {
+      "name": "Actions & Controls",
+      "count": 3,
+      "components": ["Button", "ButtonGroup", "Switcher"]
+    },
+    {
+      "name": "Advanced",
+      "count": 3,
+      "components": ["AttributeForm", "Selector", "Text"]
+    }
+  ],
+  "designTokens": {
+    "colors": {
+      "primary": "--color-blue-500",
+      "text": {
+        "primary": "--color-text-primary",
+        "secondary": "--color-text-secondary",
+        "tertiary": "--color-text-tertiary"
+      },
+      "surface": {
+        "white": "--color-surface-white",
+        "light": "--color-surface-light",
+        "medium": "--color-surface-medium"
+      },
+      "system": {
+        "critical": "--color-system-critical",
+        "warning": "--color-system-warning",
+        "success": "--color-system-success",
+        "info": "--color-system-info"
+      }
+    },
+    "spacing": {
+      "xs": "4px",
+      "sm": "8px",
+      "md": "16px",
+      "lg": "24px",
+      "xl": "32px"
+    },
+    "radius": {
+      "sm": "4px",
+      "md": "6px",
+      "lg": "8px"
+    }
+  },
+  "rules": {
+    "required": [
+      "All imports must be from @syndigo/design-system",
+      "Use Text component for all typography",
+      "Use design tokens (var(--color-*)) for colors",
+      "Follow semantic spacing (8px, 16px, 24px)"
+    ],
+    "forbidden": [
+      "No HTML elements directly for UI (<button>, <input>, <select>)",
+      "No inline font styles (fontFamily, fontSize, fontWeight)",
+      "No hardcoded colors (#hex or rgb())",
+      "No custom wrapper components without approval",
+      "No Tailwind classes for Syndigo components"
+    ]
+  },
+  "commonPatterns": {
+    "form": {
+      "components": ["TextField", "SelectField", "Button", "InlineError"],
+      "example": "/guidelines/components/input-field.md"
+    },
+    "table": {
+      "components": ["Table", "SearchField", "FilterDropdown", "Avatar"],
+      "example": "/guidelines/components/table.md"
+    },
+    "modal": {
+      "components": ["Modal", "TextField", "Button"],
+      "example": "/guidelines/components/modal.md"
+    }
+  },
+  "aiInstructions": {
+    "beforeCoding": {
+      "step1_listComponents": "FIRST review available Syndigo components by category: Form & Input (11), Layout & Containers (10), Navigation (10), Data Display (13), Feedback & States (5), Actions & Controls (3), Advanced (3). Component names MUST match exact names from these lists.",
+      "step2_estimateComplexity": "Estimate component count: 'For [screen type], I estimate [X] components: [Y] form/input, [Z] layout, [W] data display, [V] feedback/states'. This catches missing components early.",
+      "step3_determineFormat": "Choose format based on complexity: SIMPLE (1-5 components) = single table, MEDIUM (6-15) = single table with section comments, COMPLEX (16+) = separate tables per section (Header, Filters, Content, Modals, States).",
+      "step4_createMapping": "Create Component Mapping Table in EXACT markdown format with 5 columns: UI Element | Syndigo Component | Required Props | Optional Props | Notes. Required Props MUST include state bindings (value/onChange for inputs), event handlers (onClick/onSubmit), and conditional props (disabled/loading/error). Optional Props include styling, labels, placeholders. Notes explain non-obvious decisions.",
+      "step5_validate": "Self-validate using 12-point checklist: COMPLETENESS (all elements, edge cases, interactions, data display), ACCURACY (exact names, state bindings, event handlers, conditional props), QUALITY (realistic values, obvious types, clear state management, explanatory notes). Show validation score: X/12 checks passed.",
+      "step6_present": "Present mapping with: title 'Component Mapping Table', validation score, estimated component count, all mapping tables, then EXPLICIT statement 'WAITING FOR YOUR APPROVAL - Please respond with: APPROVED, Change [X] to [Y], Start over, or Add [element]. I will NOT start coding until you explicitly approve.'",
+      "step7_handleFeedback": "If 'APPROVED' → proceed to implementation. If change requested → update specific rows, re-validate, show revised mapping with new score, wait again. If 'Start over' → ask clarifying questions, return to step 1. If 'STOP' → apologize, return to step 1.",
+      "criticalRule": "NEVER write code before receiving explicit 'APPROVED' or 'Looks good' response. If you skip this workflow and user says 'STOP', immediately apologize and return to step 1."
+    },
+    "implementation": {
+      "strictAdherence": "Use ONLY components from approved mapping table - no additions, no substitutions, no custom components",
+      "propsMatch": "Props MUST match mapping specifications exactly - Required Props from mapping become actual props in code",
+      "edgeCases": "Implement ALL edge cases from mapping (loading, error, empty states) - if not in mapping, ask before adding",
+      "codeStructure": "Add comment at top: '// Component Mapping Reference: See approved table above // Estimated components: [N]'. Group code by mapping sections. Add inline comments referencing mapping rows.",
+      "requiredRules": [
+        "Use <Text> component for all text (never inline fontFamily/fontSize/fontWeight)",
+        "Use design tokens for colors: var(--color-blue-500), var(--color-text-primary), etc.",
+        "Follow semantic spacing: gap: 8px (small), 16px (medium), 24px (large)",
+        "Import from @syndigo/design-system only"
+      ],
+      "forbiddenActions": [
+        "Never use <button>, <input>, <select>, <textarea>, <form> HTML tags directly",
+        "Never use hardcoded colors (#2d75e2, rgb(), rgba())",
+        "Never create custom wrapper components without explicit approval",
+        "Never add components not in approved mapping",
+        "Never use Tailwind classes for Syndigo components"
+      ]
+    },
+    "validation": {
+      "preImplementation": "Before coding: mapping approved? All components from list? Props complete? Edge cases included?",
+      "postImplementation": [
+        "All imports from @syndigo/design-system?",
+        "All components from approved mapping used?",
+        "No components NOT in mapping added?",
+        "Props match mapping specifications?",
+        "Text component used for typography?",
+        "Design tokens used for colors?",
+        "No custom HTML UI elements?",
+        "All edge cases from mapping implemented?",
+        "Event handlers connected to state?",
+        "Loading/error/empty states working?"
+      ],
+      "ifValidationFails": "Fix issues immediately before presenting code to user. Do not show broken code."
+    },
+    "errorRecovery": {
+      "ifSkippedMapping": "User says 'STOP. Show me the Component Mapping Table first' → Apologize, return to step 1 (list components), complete full workflow, do NOT use any code already written",
+      "ifWrongComponent": "User says 'That component doesn't exist' → Check available components list, show correct alternatives from list, update mapping, wait for approval",
+      "ifIncompleteProps": "User says 'Missing [prop]' → Update mapping table to add prop, show revised mapping, wait for new approval",
+      "ifNoApproval": "If you proceeded without approval → Stop immediately, show mapping retroactively, apologize, ask for approval to continue or restart"
+    },
+    "commonMistakes": {
+      "avoidThese": [
+        "Creating mapping from memory (ALWAYS review component list first)",
+        "Vague props like 'label, value, onChange' (SHOW actual values: value={email}, onChange={setEmail})",
+        "Missing edge cases (ALWAYS include loading, error, empty state components)",
+        "Proceeding without approval (WAIT for explicit 'APPROVED')",
+        "Guessing component names (USE exact names from list)",
+        "Single table for 20+ components (BREAK into sections)",
+        "Ignoring user changes (UPDATE mapping and wait for new approval)"
+      ]
+    }
+  },
+  "integrations": {
+    "lovable": {
+      "enabled": true,
+      "optimized": true,
+      "workflowVersion": "2.0.0"
+    },
+    "figma": {
+      "fileId": "Hxa07kuxW2VZuVRjKVS6zM",
+      "libraryName": "Orbit Design System Components",
+      "tokenSync": "TokenStudio GitHub → Figma Variables"
+    }
+  },
+  "references": {
+    "mainDocs": "/DESIGN-SYSTEM.md",
+    "guidelines": "/guidelines/Guidelines.md",
+    "publishingGuide": "/guidelines/Publishing.md",
+    "componentGuidelines": "/guidelines/components/",
+    "tokenGuidelines": "/guidelines/design-tokens/"
+  },
+  "maintainers": [
+    {
+      "name": "Fess (Gideon Awolesi)",
+      "role": "Design Engineer",
+      "focus": "Design system governance, Figma↔Code pipeline"
+    }
+  ]
+}
