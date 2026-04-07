@@ -24,7 +24,7 @@ export function Switcher({
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      padding: '0 4px',
+      padding: '4px',
       borderRadius: '4px',
       border: '1px solid var(--color-stroke-light, #dee5ef)',
     };
